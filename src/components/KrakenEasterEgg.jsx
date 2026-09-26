@@ -335,17 +335,17 @@ function KrakenEasterEgg() {
             }}
           >
             <div className="text-center">
-              <p className="font-mono text-[9px] uppercase tracking-[0.5em] text-[#80653b]">
+              <p className="font-mono text-[15px] uppercase tracking-[0.5em] text-[#80653b]">
                 SOMETHING HAS AWAKENED
               </p>
 
-              <h2 className="mt-5 font-serif text-5xl tracking-[0.16em] text-[#d8c99f] drop-shadow-[0_0_30px_rgba(216,201,159,0.3)] md:text-7xl">
+              <h2 className="mt-5 font-serif text-3xl tracking-[0.16em] text-[#d8c99f] drop-shadow-[0_0_30px_rgba(216,201,159,0.3)] md:text-7xl">
                 THE KRAKEN
               </h2>
 
               <div className="mx-auto mt-6 h-px w-28 bg-[#a8844d]" />
 
-              <p className="mt-5 font-mono text-[8px] uppercase tracking-[0.35em] text-[#718488]">
+              <p className="mt-5 font-mono text-[15px] uppercase tracking-[0.5em] text-[#718488]">
                 YOU SHOULD HAVE STAYED OFF THE MAP
               </p>
             </div>

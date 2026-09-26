@@ -6,6 +6,9 @@ import SpyglassProjectCard from "./components/SpyglassProjectCard";
 import ParallaxOcean from "./components/ParallaxOcean";
 import DayNightCycle from "./components/DayNightCycle";
 import HeroTypingLog from "./components/HeroTypingLog";
+import port1 from "./images/port1.jfif";
+import port2 from "./images/port2.png";
+import port4 from "./images/port4.jfif";
 
 function SkillCard({ number, name, description, level }) {
   return (
@@ -187,9 +190,9 @@ function TreasureCard({
         )}
 
 
-        {/* =================================================
+        {/* ==============================================
             LOGIC ENGINE
-        ================================================= */}
+        =============================================== */}
 
         {type === "logic" && (
           <div className="absolute inset-0 flex items-center justify-center">
@@ -248,7 +251,7 @@ function TreasureCard({
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="border border-[#80653b]/50 px-2.5 py-1 font-mono text-[6px] uppercase tracking-[0.2em] text-[#8c7650]"
+                className="border border-[#80653b]/50 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-[#8c7650]"
               >
                 {tag}
               </span>
@@ -501,11 +504,11 @@ function JourneyMarker({
 
           <div className="flex items-center justify-between">
 
-            <span className="font-mono text-[7px] text-[#80653b]">
+            <span className="font-mono text-[10px] text-[#80653b]">
               {number}
             </span>
 
-            <span className="font-mono text-[7px] text-[#687b7f]">
+            <span className="font-mono text-[10px] text-[#687b7f]">
               {year}
             </span>
 
@@ -515,7 +518,7 @@ function JourneyMarker({
             {title}
           </h4>
 
-          <p className="mt-2 text-[8px] leading-4 text-[#718488]">
+          <p className="mt-2 text-[10px] leading-4 text-[#718488]">
             {text}
           </p>
 
@@ -542,12 +545,12 @@ function ArsenalItem({ name, level, description }) {
             {name}
           </h4>
 
-          <p className="mt-1 text-[8px] text-[#586b6f]">
+          <p className="mt-1 text-[10px] text-[#586b6f]">
             {description}
           </p>
         </div>
 
-        <span className="font-mono text-[8px] text-[#80653b]">
+        <span className="font-mono text-[10px] text-[#80653b]">
           {level}%
         </span>
 
@@ -579,9 +582,9 @@ function App() {
   const projects = [
     {
       number: "01",
-      title: "BIS RAG Assistant",
+      title: "AI Assistant",
       description:
-        "An AI-powered assistant that helps users explore BIS standards using retrieval augmented generation.",
+        "An AI-powered assistant.",
       tags: ["Python", "LangChain", "RAG"],
       position: "left-[12%] top-[22%]",
     },
@@ -605,14 +608,14 @@ function App() {
 
   const skills = [
     ["Java", "85%"],
-    ["Python", "80%"],
-    ["JavaScript", "82%"],
-    ["React", "78%"],
-    ["SQL", "75%"],
-    ["DSA & Algorithms", "80%"],
-    ["Git & GitHub", "85%"],
-    ["Tailwind CSS", "75%"],
-    ["Motion", "65%"],
+    ["Python", "50%"],
+    ["JavaScript", "32%"],
+    ["React", "28%"],
+    ["SQL", "55%"],
+    ["DSA & Algorithms", "50%"],
+    ["Git & GitHub", "55%"],
+    ["Tailwind CSS", "45%"],
+    ["Motion", "35%"],
   ];
 
   const journey = [
@@ -700,12 +703,22 @@ function App() {
   <div className="pointer-events-none absolute bottom-50 right-8 h-12 w-12 border-b border-r border-[#a8844d]/80" />
   
 
-  {/* =====================================================
+  {/* ====================================================
       TOP COMPASS
   ===================================================== */}
   
+{/* HERO BACKGROUND */}
+<div
+  className="pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage: "url('/images/portb.jpg')",
+  }}
+/>
 
-  {/* =====================================================
+{/* DARK OVERLAY */}
+<div className="pointer-events-none absolute inset-0 z-[1] bg-[#02070b]/55" />
+
+  {/* ====================================================
       HERO CONTENT
   ===================================================== */}
   <div className="relative z-20 mx-auto flex min-h-screen w-full max-w-[1500px] flex-col px-6 pt-28 md:px-10">
@@ -1510,10 +1523,10 @@ function App() {
   <SpyglassProjectCard
     number="01"
     label="KNOWLEDGE CORE"
-    title="BIS RAG ASSISTANT"
+    title="AI ASSISTANT"
     description="An AI-powered assistant that helps users explore BIS standards using retrieval augmented generation."
     tags={["Python", "LangChain", "RAG"]}
-    image="/images/bis-rag.jpg"
+    image={port1}
   />
 
   <SpyglassProjectCard
@@ -1522,7 +1535,7 @@ function App() {
     title="PORTFOLIO WEBSITE"
     description="An interactive portfolio designed as a cinematic journey through a pirate world."
     tags={["React", "Tailwind", "Motion"]}
-    image="/images/portfolio.jpg"
+    image={port2}
   />
 
   <SpyglassProjectCard
@@ -1531,7 +1544,7 @@ function App() {
     title="DSA SOLUTIONS"
     description="A collection of algorithms and problem-solving challenges explored throughout the journey."
     tags={["Java", "DSA", "Algorithms"]}
-    image="/images/dsa.jpg"
+    image={port4}
   />
 
 </div>
@@ -1905,35 +1918,12 @@ function App() {
     >
 
       {/* map texture */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-30"
-        style={{
-          backgroundImage: `
-            radial-gradient(
-              circle at 20% 30%,
-              rgba(184,150,96,0.08) 0,
-              transparent 35%
-            ),
-            radial-gradient(
-              circle at 80% 70%,
-              rgba(184,150,96,0.06) 0,
-              transparent 35%
-            ),
-            repeating-linear-gradient(
-              0deg,
-              transparent 0px,
-              transparent 38px,
-              rgba(184,150,96,0.025) 39px
-            ),
-            repeating-linear-gradient(
-              90deg,
-              transparent 0px,
-              transparent 38px,
-              rgba(184,150,96,0.025) 39px
-            )
-          `,
-        }}
-      />
+      {/* TREASURE MAP BACKGROUND */}
+<img
+  src="/images/port6.png"
+  alt=""
+  className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-35"
+/>
 
 
       {/* inner frame */}
@@ -2056,13 +2046,12 @@ function App() {
           {/* route shadow */}
           <path
             d="
-              M120 420
-              C220 500 300 330 430 350
-              C550 370 570 470 690 480
-              C800 490 850 340 940 300
-              C1040 255 1060 160 1140 190
-              C1230 225 1210 390 1320 410
-            "
+M82 383
+C180 360 280 290 365 296
+C470 300 560 410 663 413
+C760 415 820 220 931 222
+C1040 225 1140 330 1230 344
+"
             fill="none"
             stroke="rgba(0,0,0,0.5)"
             strokeWidth="5"
@@ -2071,14 +2060,13 @@ function App() {
           {/* golden route */}
           <path
             id="journey-route"
-            d="
-              M120 420
-              C220 500 300 330 430 350
-              C550 370 570 470 690 480
-              C800 490 850 340 940 300
-              C1040 255 1060 160 1140 190
-              C1230 225 1210 390 1320 410
-            "
+           d="
+M82 383
+C180 360 280 290 365 296
+C470 300 560 410 663 413
+C760 415 820 220 931 222
+C1040 225 1140 330 1230 344
+"
             fill="none"
             stroke="#a8844d"
             strokeWidth="2"
@@ -2177,22 +2165,8 @@ function App() {
         />
 
 
-        {/* =================================================
-            MAP LABELS
-        ================================================= */}
-
-        <span className="absolute left-[12%] top-[25%] rotate-[-8deg] font-serif text-s tracking-[0.2em] text-[#80653b]/60">
-          ORIGIN WATERS
-        </span>
-
-        <span className="absolute left-[43%] top-[20%] rotate-[5deg] font-serif text-s tracking-[0.2em] text-[#80653b]/50">
-          THE OPEN SEA
-        </span>
-
-        <span className="absolute right-[12%] bottom-[18%] rotate-[-4deg] font-serif text-s tracking-[0.2em] text-[#80653b]/50">
-          UNKNOWN HORIZON
-        </span>
-
+        
+        
 
         {/* map coordinates */}
         <div className="absolute bottom-7 left-8 font-mono text-[10px] uppercase tracking-[0.5em] text-[#596b6e]">
@@ -2603,7 +2577,7 @@ function App() {
               href="mailto:your.email@example.com"
               className="mt-2 block text-m text-[#bca879] transition-colors hover:text-[#e0cea0]"
             >
-              your.email@example.com
+              archishagupta20@gmail.com
             </a>
 
           </div>
@@ -2620,7 +2594,7 @@ function App() {
               href="#"
               className="mt-2 block text-m text-[#bca879] transition-colors hover:text-[#e0cea0]"
             >
-              github.com/yourusername
+              github.com/archisha20
             </a>
 
           </div>
@@ -2637,7 +2611,7 @@ function App() {
               href="#"
               className="mt-2 block text-m text-[#bca879] transition-colors hover:text-[#e0cea0]"
             >
-              linkedin.com/in/yourusername
+              linkedin.com/in/archisha-gupta-a9b0702b1
             </a>
 
           </div>

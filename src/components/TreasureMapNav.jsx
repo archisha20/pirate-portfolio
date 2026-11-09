@@ -15,10 +15,12 @@ function MapMarker({
   subtitle,
   position,
   href,
+  onNavigate,
 }) {
   return (
     <motion.a
       href={href}
+      onClick={onNavigate}
       initial={{ opacity: 0, scale: 0.85 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
@@ -495,6 +497,7 @@ function TreasureMapNav() {
                   title="The Port"
                   subtitle="Begin the Voyage"
                   href="#port"
+                  onNavigate={() => setOpen(false)}
                   position={{
                     left: "12%",
                     top: "39%",
@@ -506,6 +509,7 @@ function TreasureMapNav() {
                   title="Treasures"
                   subtitle="Things I've Built"
                   href="#treasures"
+                  onNavigate={() => setOpen(false)}
                   position={{
                     left: "30%",
                     top: "68%",
@@ -513,10 +517,11 @@ function TreasureMapNav() {
                 />
 
                 <MapMarker
-                  number="05"
+                  number="03"
                   title="About Me"
                   subtitle="The Captain's Log"
                   href="#about"
+                  onNavigate={() => setOpen(false)}
                   position={{
                     left: "51%",
                     top: "49%",
@@ -524,10 +529,11 @@ function TreasureMapNav() {
                 />
 
                 <MapMarker
-                  number="03"
+                  number="04"
                   title="My Arsenal"
                   subtitle="Tools & Knowledge"
                   href="#skills"
+                  onNavigate={() => setOpen(false)}
                   position={{
                     left: "71%",
                     top: "40%",
@@ -535,10 +541,11 @@ function TreasureMapNav() {
                 />
 
                 <MapMarker
-                  number="04"
+                  number="05"
                   title="The Journey"
                   subtitle="Course of the Voyage"
                   href="#journey"
+                  onNavigate={() => setOpen(false)}
                   position={{
                     left: "71%",
                     top: "68%",
@@ -550,6 +557,7 @@ function TreasureMapNav() {
                   title="Let's Connect"
                   subtitle="Send a Message"
                   href="#contact"
+                  onNavigate={() => setOpen(false)}
                   position={{
                     left: "89%",
                     top: "54%",
